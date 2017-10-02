@@ -9,3 +9,7 @@ gulp.task('sass', function () {
     .pipe(sass())           // forward those files to the compiler
     .pipe(gulp.dest('css')) // where to output the comipled CSS files
 })
+
+gulp.task('default', function () {
+  gulp.watch('scss/**/*.scss', ['sass'])
+})
